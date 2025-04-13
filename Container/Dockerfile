@@ -1,0 +1,8 @@
+FROM postgres:15.1
+EXPOSE 5432
+
+ENV POSTGRES_USER postgres
+ENV POSTGRES_PASSWORD 1234
+ENV POSTGRES_DB car_db
+
+VOLUME ["/var/lib/postgresql/data"]

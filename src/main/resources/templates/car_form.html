@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Car</title>
+</head>
+<body>
+<h1>Add a New Car</h1>
+<form action="/cars/add" method="post" th:object="${car}">
+    <label for="make">Make:</label>
+    <input type="text" id="make" th:field="*{make}" required><br>
+
+    <label for="model">Model:</label>
+    <input type="text" id="model" th:field="*{model}" required><br>
+
+    <label for="year">Year:</label>
+    <input type="text" id="year" th:field="*{year}" required><br>
+
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Cars List</title>
+</head>
+<body>
+<h1>Cars List</h1>
+<ul>
+    <li th:each="car : ${cars}">
+        <span th:text="${car.make}">Make</span> -
+        <span th:text="${car.model}">Model</span> -
+        <span th:text="${car.year}">Year</span>
+    </li>
+</ul>
+
+<a href="/cars/form">Add another car</a>
+</body>
+</html>
