@@ -26,4 +26,8 @@ public class CarService {
                 .map(TransferDataUtils::carEntityToDto)
                 .toList();
     }
+
+    public void clearDatabase() {
+        carRepository.deleteAll();
+    }
 }

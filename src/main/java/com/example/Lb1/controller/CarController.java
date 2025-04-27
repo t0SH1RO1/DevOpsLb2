@@ -40,4 +40,10 @@ public class CarController {
         model.addAttribute("cars", cars);
         return "car_list";
     }
+
+    @PostMapping("/clearDatabase")
+    public String clearDatabase() {
+        carService.clearDatabase();
+        return "redirect:/cars/list";
+    }
 }

@@ -1,6 +1,3 @@
-echo "Збірка Spring Boot застосунку"
-mvn clean install
-
 echo "Створення Docker-образу для PostgreSQL"
 docker image build -t local/postgres:15.1 .
 
